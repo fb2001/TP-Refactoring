@@ -13,14 +13,14 @@ public class Main {
 
         System.out.println("---- Test du programme présentant le code smell Middle Man ----");
 
-        System.out.println("Nom du client via CustomerService : " + service.getCustomerName());
+        System.out.println("Nom du client via CustomerService : " + service.getCustomer().getName());
 
-        System.out.println("Détails avant modification : " + service.getCustomerInfo());
+        System.out.println("Détails avant modification : " + service.getCustomer().getDetails());
 
         // Modification via CustomerService
-        service.changeCustomerEmail("fadel.benomar@newmail.com");
+        service.getCustomer().updateEmail("fadel.benomar@newmail.com");
 
-        System.out.println("Détails après modification : " + service.getCustomerInfo());
+        System.out.println("Détails après modification : " + service.getCustomer().getDetails());
 
         System.out.println("\nComme on le voit, la classe CustomerService ne fait que forwarder les appels.");
     }

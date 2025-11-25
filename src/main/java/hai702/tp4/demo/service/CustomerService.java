@@ -16,15 +16,7 @@ public class CustomerService {
         this.customer = customer;
     }
 
-    public String getCustomerName() {
-        return customer.getName();  // simple délégation
-    }
-
-    public void changeCustomerEmail(String email) {
-        customer.updateEmail(email);  // simple délégation
-    }
-
-    public String getCustomerInfo() {
-        return customer.getDetails();  // simple délégation
+    public Customer getCustomer() {
+        return customer;
     }
 }
